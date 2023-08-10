@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('flash_sale_items', function (Blueprint $table) {
             $table->id();
-            $table->integer('product_id');
-            $table->integer('flash_sale_id');
+            $table->foreignId('product_id')->constrained()->noActionOnDelete();
+            $table->foreignId('flash_sale_id')->constrained()->noActionOnDelete();
             $table->boolean('show_at_home');
             $table->boolean('status');
             $table->timestamps();
