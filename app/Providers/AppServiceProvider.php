@@ -27,22 +27,22 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
         //
-        try {
-            $generalSetting = GeneralSetting::first();
-            $logoSetting = LogoSetting::first();
+        // try {
+        //     $generalSetting = GeneralSetting::first();
+        //     $logoSetting = LogoSetting::first();
 
-            /** set time zone */
-            Config::set('app.timezone', $generalSetting->time_zone);
+        //     /** set time zone */
+        //     Config::set('app.timezone', $generalSetting->time_zone);
 
 
-            /** Share variable at all view */
-            View::composer('*', function($view) use ($generalSetting, $logoSetting){
+        //     /** Share variable at all view */
+        //     View::composer('*', function($view) use ($generalSetting, $logoSetting){
 
-                $view->with(['settings' => $generalSetting, 'logoSetting' => $logoSetting]);
-            });
-        } catch (Exception $e) {
-            echo 'Caught exception: ',  $e->getMessage(), "\n";
-        }
+        //         $view->with(['settings' => $generalSetting, 'logoSetting' => $logoSetting]);
+        //     });
+        // } catch (Exception $e) {
+        //     echo 'Caught exception: ',  $e->getMessage(), "\n";
+        // }
 
     }
 }
