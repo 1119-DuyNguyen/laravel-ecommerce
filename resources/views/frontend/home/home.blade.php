@@ -6,47 +6,11 @@
 @section('content')
 
     <!--============================
-        BANNER PART 2 START
+        HOME CONTAINER START
     ==============================-->
-    @include('frontend.home.sections.banner-slider')
+    @include('frontend.home.sections.home-container')
     <!--============================
-        BANNER PART 2 END
+        HOME CONTAINER END
     ==============================-->
-
-
-    <!--============================
-        FLASH SELL START
-    ==============================-->
-    @include('frontend.home.sections.flash-sale')
-    <!--============================
-        FLASH SELL END
-    ==============================-->
-
-    <!--============================
-        HOT DEALS START
-    ==============================-->
-    @include('frontend.home.sections.hot-deals')
-    <!--============================
-        HOT DEALS END
-    ==============================-->
-
-
-    <!--============================
-        BRAND SLIDER START
-    ==============================-->
-    @include('frontend.home.sections.brand-slider')
-    <!--============================
-        BRAND SLIDER END
-    ==============================-->
-
-    <!--============================
-      HOME SERVICES START
-    ==============================-->
-    {{-- @include('frontend.home.sections.services') --}}
-    <!--============================
-        HOME SERVICES END
-    ==============================-->
-
-
 
 @endsection

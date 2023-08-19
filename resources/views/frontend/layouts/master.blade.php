@@ -7,196 +7,284 @@
 @endforeach
 @endif
 
-    <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
-    <title>
-        @yield('title',"e-commerce")
-    </title>
-    <link rel="icon" type="image/png" href="{{asset($logoSetting->favicon)}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/all.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/select2.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/jquery.nice-number.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/jquery.calendar.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/add_row_custon.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/mobile_menu.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/jquery.exzoom.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/multiple-image-video.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/ranger_style.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/jquery.classycountdown.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/venobox.min.css')}}">
-    <link rel="stylesheet" href="{{asset('lib/sweetalert/sweetalert.all.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    @if($settings->layout=="RTL")
-        <link rel="stylesheet" href="{{asset("frontend/css/rtl.css")}}">
-    @endif
-    <!-- <link rel="stylesheet" href="{{asset('front/cssrtl.css')}}> -->
-</head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            @yield('title',"e-commerce")
+        </title>
+        <link rel="stylesheet" href="{{asset('frontend/css/normalize.css')}}" />
+        <link rel="stylesheet" href="{{asset('frontend/css/icomoon/style.css')}}" />
+        <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}" />
+    </head>
 
 <body>
 
-<!--============================
-    HEADER START
-==============================-->
-@include('frontend.layouts.header')
-<!--============================
-    HEADER END
-==============================-->
-
-
-<!--============================
-    MAIN MENU START
-==============================-->
-@include('frontend.layouts.menu')
-<!--============================
-    MAIN MENU END
-==============================-->
-
-
-<!--==========================
-    POP UP START
-===========================-->
-<!-- <section id="wsus__pop_up">
-    <div class="wsus__pop_up_center">
-        <div class="wsus__pop_up_text">
-            <span id="cross"><i class="fas fa-times"></i></span>
-            <h5>get up to <span>75% off</span></h5>
-            <h2>Sign up to E-SHOP</h2>
-            <p>Subscribe to the <b>E-SHOP</b> market newsletter to receive updates on special offers.</p>
-            <form>
-                <input type="email" placeholder="Your Email" class="news_input">
-                <button type="submit" class="common_btn">go</button>
-                <div class="wsus__pop_up_check_box">
-                </div>
-            </form>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11">
-                <label class="form-check-label" for="flexCheckDefault11">
-                    Don't show this popup again
-                </label>
+    <!--============================
+        HEADER START
+    ==============================-->
+    @include('frontend.layouts.header')
+    <!--============================
+        HEADER END
+    ==============================-->
+    
+    <div id="main" class="--darkMode">
+        
+        <!-- danh muc san pham -->
+        <div
+            id="product-container"
+            class="product-container --darkMode --hide">
+            <div class="show-product">
+                <div class="image-container-LP"></div>
             </div>
         </div>
-    </div>
-</section> -->
-<!--==========================
-    POP UP END
-===========================-->
-<!--============================
-<?php $link = ""; $countSegments=count(Request::segments());?>
-@if($countSegments>0)
-    BREADCRUMB START
-==============================-->
-<section id="wsus__breadcrumb">
-    <div class="wsus_breadcrumb_overlay">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h4> {{ucwords(str_replace('-',' ',Request::segment($countSegments)))}}</h4>
-                    <ul>
-                        <li><a href="{{url('/')}}">home</a></li>
-{{--                        <li><a href="#">order tracking</a></li>--}}
 
-                        @for($i = 1; $i <= $countSegments; $i++)
-                            @if($i < $countSegments & $i > 0)
-                                    <?php $link .= "/" . Request::segment($i); ?>
+        @yield('content')
 
-                                <li>
-                                <a href="<?= $link ?>">{{ ucwords(str_replace('-',' ',Request::segment($i)))}}</a>
-                                </li>
+        <div id="user-login" class="modal --hide">
+            <div class="container">
+                <div class="content --darkMode">
+                    <div class="close">
+                        <i class="icon-cross icon"></i>
+                    </div>
+                    <div class="title">
+                        <span> ĐĂNG NHẬP </span>
+                    </div>
+                    <form action="#" class="form" id="form-login">
+                        <div class="form-group row">
+                            <label for="usernameLogin"
+                                >Tên đăng nhập:</label
+                            >
+                            <input
+                                name="username"
+                                type="text"
+                                data-rules="required"
+                                id="usernameLogin"
+                            />
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label for="passwordLogin">Mật khẩu:</label>
+                            <input
+                                name="password"
+                                type="password"
+                                data-rules="required"
+                                id="passwordLogin"
+                            />
+                            <span class="form-message"></span>
+                        </div>
+                        <span class="error-login"></span>
 
-                            @else
-                                <li>
-                                    <a href="#" class="">
-                                {{ucwords(str_replace('-',' ',Request::segment($i)))}}
-                                    </a>
-                                </li>
-                            @endif
-                        @endfor
-                    </ul>
+                        <button type="submit" id="btnlogin">
+                            Đăng nhập
+                        </button>
+                    </form>
+                    <p class="row">Bạn chưa có tài khoản?</p>
+
+                    <a href="#" class="row">Đăng ký</a>
                 </div>
             </div>
         </div>
+        <div id="user-register" class="modal --hide">
+            <div class="container">
+                <div class="content --darkMode">
+                    <div class="close">
+                        <i class="icon-cross icon"></i>
+                    </div>
+                    <div class="title">ĐĂNG KÝ</div>
+                    <form action="#" class="form" id="form-register">
+                        <div class="form-group row">
+                            <label for="fullname" class="form-label"
+                                >Họ và tên</label
+                            >
+                            <input
+                                id="fullname"
+                                name="fullname"
+                                data-rules="required|fullname"
+                                type="text"
+                                placeholder=""
+                                class="form-control"
+                            />
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label for="userNameRegister" class="form-label"
+                                >Tài khoản</label
+                            >
+                            <input
+                                id="userNameRegister"
+                                name="username"
+                                data-rules="required|username"
+                                type="text"
+                                placeholder=""
+                                class="form-control"
+                            />
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label for="passRegister" class="form-label"
+                                >Mật khẩu</label
+                            >
+                            <input
+                                id="passRegister"
+                                name="password"
+                                data-rules="password"
+                                type="password"
+                                placeholder=""
+                                class="form-control"
+                            />
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label
+                                for="repeatPassRegister"
+                                class="form-label"
+                                >Nhập lại mật khẩu</label
+                            >
+                            <input
+                                id="repeatPassRegister"
+                                name="repeatPassRegister"
+                                data-rules="repeatPassword"
+                                type="password"
+                                placeholder=""
+                                class="form-control"
+                            />
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label for="fullname" class="form-label"
+                                >Địa chỉ</label
+                            >
+                            <input
+                                id="address"
+                                name="address"
+                                data-rules="required"
+                                type="text"
+                                placeholder=""
+                                class="form-control"
+                            />
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group row">
+                            <label for="phoneRegister" class="form-label"
+                                >Số điện thoại</label
+                            >
+                            <input
+                                id="phoneRegister"
+                                name="phone"
+                                data-rules="required|phone"
+                                type="text"
+                                placeholder="0123456789"
+                                class="form-control"
+                            />
+                            <span class="form-message"></span>
+                        </div>
+
+                        <button type="submit" id="btnsignup">
+                            Đăng ký
+                        </button>
+                    </form>
+
+                    <a href="#">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+        <!-- search san pham -->
+        <div id="form-search" class="modal --hide">
+            <div class="container">
+                <div class="content --darkMode">
+                    <div class="close">
+                        <i class="icon-cross icon"></i>
+                    </div>
+                    <div class="title">
+                        <span>Tìm kiếm</span>
+                    </div>
+                    <div class="search-content">
+                        <div class="search-input">
+                            <div class="icon">
+                                <i class="icon-search"></i>
+                            </div>
+                            <input
+                                type="text"
+                                placeholder="Tìm theo tên sản phẩm"
+                            />
+                        </div>
+                        <div class="advanced-input">
+                            <select name="tag">
+                                <option value="">Tất cả</option>
+                                <option value="Cà phê">Cà phê</option>
+                                <option value="Trà">Trà</option>
+                                <option value="Hi-Tea">Hi-Tea</option>
+                            </select>
+                            <div class="price">
+                                <!-- <label name="range">Giá:</label> -->
+                                <input
+                                    name="minPrice"
+                                    type="number"
+                                    placeholder="Giá từ"
+                                    step="1000"
+                                    min="0"
+                                    max="500000"
+                                />
+                                <span> - </span>
+                                <input
+                                    name="maxPrice"
+                                    type="number"
+                                    placeholder="Đến"
+                                    step="1000"
+                                    min="0"
+                                    max="500000"
+                                />
+                            </div>
+                        </div>
+                        <div class="search-response">
+                            <div class="product-related">
+                                <ul class="option_selections">
+                                    <li
+                                        class="option_selections_item --hide"
+                                    >
+                                        <div class="image-pack">
+                                            <img
+                                                class="product-image"
+                                                src="public/img/ngoiNhaCafe/CPhSa.jpg"
+                                                alt=""
+                                            />
+                                            <div class="buy-now">
+                                                <span class="text-buy">
+                                                    Mua ngay!
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="overview">
+                                            <p class="overview_title">
+                                                Cà Phê Sữa Đá
+                                            </p>
+                                            <p>29000 đ</p>
+                                        </div>
+
+                                        <span class="icon-plus icon"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- chi tiet san pham -->
+        <div id="detail-product" class="modal --hide">
+            <div class="container">
+                <div class="content --darkMode"></div>
+            </div>
+        </div>
+
+        <!-- toast -->
+        <div id="toast"></div>
     </div>
-</section>
-@endif
-@yield('content')
-
-
-<!--============================
-    FOOTER PART START
-==============================-->
-
-@include('frontend.layouts.footer')
-<!--============================
-    FOOTER PART END
-==============================-->
-
-
-<!--============================
-    SCROLL BUTTON START
-==============================-->
-<div class="wsus__scroll_btn">
-    <i class="fas fa-chevron-up"></i>
-</div>
-<!--============================
-    SCROLL BUTTON  END
-==============================-->
-
-
-<!--jquery library js-->
-<script src="{{asset('frontend/js/jquery-3.6.0.min.js')}}"></script>
-<!--bootstrap js-->
-<script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
-<!--font-awesome js-->
-<script src="{{asset('frontend/js/Font-Awesome.js')}}"></script>
-<!--select2 js-->
-<script src="{{asset('frontend/js/select2.min.js')}}"></script>
-<!--slick slider js-->
-<script src="{{asset('frontend/js/slick.min.js')}}"></script>
-<!--simplyCountdown js-->
-<script src="{{asset('frontend/js/simplyCountdown.js')}}"></script>
-<!--product zoomer js-->
-<script src="{{asset('frontend/js/jquery.exzoom.js')}}"></script>
-<!--nice-number js-->
-<script src="{{asset('frontend/js/jquery.nice-number.min.js')}}"></script>
-<!--counter js-->
-<script src="{{asset('frontend/js/jquery.waypoints.min.js')}}"></script>
-<script src="{{asset('frontend/js/jquery.countup.min.js')}}"></script>
-<!--add row js-->
-<script src="{{asset('frontend/js/add_row_custon.js')}}"></script>
-<!--multiple-image-video js-->
-<script src="{{asset('frontend/js/multiple-image-video.js')}}"></script>
-<!--sticky sidebar js-->
-<script src="{{asset('frontend/js/sticky_sidebar.js')}}"></script>
-<!--price ranger js-->
-<script src="{{asset('frontend/js/ranger_jquery-ui.min.js')}}"></script>
-<script src="{{asset('frontend/js/ranger_slider.js')}}"></script>
-<!--isotope js-->
-<script src="{{asset('frontend/js/isotope.pkgd.min.js')}}"></script>
-<!--venobox js-->
-<script src="{{asset('frontend/js/venobox.min.js')}}"></script>
-<!--classycountdown js-->
-<script src="{{asset('frontend/js/jquery.classycountdown.js')}}"></script>
-
-<script src="{{asset('lib/sweetalert/sweetalert.all.min.js')}}"></script>
-
-<!--main/custom js-->
-<script src="{{asset('frontend/js/main.js')}}"></script>
-@include('frontend.layouts.scripts-app')
-@include('sweetalert::alert')
-
-@stack('scripts')
+    
 </body>
 
 </html>

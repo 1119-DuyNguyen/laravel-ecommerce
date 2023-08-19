@@ -1,85 +1,169 @@
+<div id="header">
+    <!-- mobile list -->
+    <div class="menu__mobile --darkMode">
+        <div id="menu-btn" class="line-height-50 header__icon-menu-btn">
+            <span class="icon-large icon-menu"></span>
+        </div>
+        <div class="header__menu-mobile">
+            <h3 class="header__menu-mobile-line">@yield('title',"e-commerce")</h3>
+            <!-- Khúc này là đợi có icon rồi thêm vô -->
+            <span class="icon-large icon-home"></span>
+        </div>
+        <span
+            id="darkMode-btn"
+            class="icon-brightness-contrast btn-theme"
+        ></span>
+        <div class="menu__board --disappear">
+            <div class="layout-dark"></div>
 
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-2 col-md-1 d-lg-none">
-                <div class="wsus__mobile_menu_area">
-                    <span class="wsus__mobile_menu_icon"><i class="fal fa-bars"></i></span>
+            <div class="text-hover board-body">
+                <div id="close-btn" class="close-btn-wrap">
+                    <span class="icon icon-cross"></span>
                 </div>
-            </div>
-            <div class="col-xl-2 col-7 col-md-8 col-lg-2">
-                <div class="wsus_logo_area">
-                    <a class="wsus__header_logo" href="{{url('/')}}">
-                        <img src="{{asset($logoSetting->logo)}}" alt="logo" class="img-fluid w-100 rounded" >
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-5 col-md-6 col-lg-4 d-none d-lg-block">
-                <div class="wsus__search">
-                    <form action="{{route('product.index')}}">
-                        <input type="text" placeholder="Search..." name="search" value="{{request()->search}}">
-                        <button type="submit"><i class="far fa-search"></i></button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-xl-5 col-3 col-md-3 col-lg-6">
-                <div class="wsus__call_icon_area">
-                    <div class="wsus__call_area">
-                        <div class="wsus__call">
-                            <i class="fas fa-user-headset"></i>
+
+                <ul class="text-hover board__list">
+                    <!-- <li class="board__item">
+                        <span
+                            class="not-flow text-color header-btn"
+                            style="width: 70px"
+                            >Cà phê
+                            <span class="size-normal icon-mug"></span>
+                        </span>
+                    </li>
+
+                    <li class="board__item">
+                        <span
+                            class="not-flow text-color header-btn"
+                            style="width: 42px"
+                            >Trà<span
+                                class="size-normal icon-leaf"
+                            ></span
+                        ></span>
+                    </li> -->
+
+                    <li class="hover board__item">
+                        <span
+                            class="not-flow text-color"
+                            style="width: 93px"
+                            >Thực đơn<span
+                                class="size-normal icon-circle-down"
+                            ></span
+                        ></span>
+
+                        <!-- Phần bên trong thực đơn -->
+                        <div class="header__modal --disappear">
+                            <div class="flex-assist">
+                                <div class="layout-white"></div>
+
+                                <div class="header__menu-modal">
+                                    <ul
+                                        class="text-hover header__inside-menu-modal"
+                                    >
+                                        <li
+                                            class="header__inside-menu-item-1"
+                                        >
+                                            <a
+                                                class="text-color menu-btn"
+                                                href="#"
+                                                >Tất cả</a
+                                            >
+                                        </li>
+
+                                        <li
+                                            class="header__inside-menu-item-1"
+                                        >
+                                            <a
+                                                class="text-color menu-btn"
+                                                href="#"
+                                                >Cà phê</a
+                                            >
+                                        </li>
+
+                                        <li
+                                            class="text-color header__inside-menu-item-1"
+                                        >
+                                            <a
+                                                class="text-color menu-btn"
+                                                href="#"
+                                                >Trà</a
+                                            >
+                                        </li>
+
+                                        <li
+                                            class="header__inside-menu-item-1"
+                                        >
+                                            <a
+                                                class="font-family text-color menu-btn"
+                                                href="#"
+                                                >Hi-Tea Healthy</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="wsus__call_text">
-                            <p>{{$settings->contact_email}}</p>
-                            <p>{{$settings->contact_phone}}</p>
-                        </div>
-                    </div>
-                    <ul class="wsus__icon_area">
-                        <li><a href="{{route('user.wishlist.index')}}"><i class="fal fa-heart"></i><span id="wishlist_count">
-                            @if (auth()->check())
-                                        {{\App\Models\Wishlist::where('user_id', auth()->user()->id)->count()}}
-                                    @else
-                                        0
-                                    @endif
-                        </span></a></li>
-                        {{-- <li><a href="compare.html"><i class="fal fa-random"></i><span>03</span></a></li> --}}
-                        <li><a class="wsus__cart_icon" href="#"><i
-                                    class="fal fa-shopping-bag"></i><span id="cart-count">{{count(\Cart::getContent())}}</span></a></li>
-                    </ul>
+                    </li>
+                    <li class="board__item">
+                        <span
+                            class="not-flow text-color h-about-us-btn"
+                            style="width: 127px"
+                            >Về chúng tôi<span
+                                class="size-normal icon-info"
+                            ></span
+                        ></span>
+                    </li>
+
+                    <li class="board__item">
+                        <a
+                            href="#footer"
+                            class="not-flow text-color"
+                            style="width: 74px; text-decoration: none"
+                            >Liên hệ<span
+                                class="size-normal icon-phone"
+                            ></span
+                        ></a>
+                    </li>
+
+                    <!-- làm trước -->
+                    <!-- <li class="board__item">
+                        <span
+                            class="not-flow text-color"
+                            style="width: 127px"
+                            >Lê Nguyễn Minh Huy<span
+                                class="size-normal icon-info"
+                            ></span
+                        ></span>
+                    </li> -->
+                    <div class="form__log-in-out"></div>
+                </ul>
+
+                <div class="header-mb-acount">
+                    <span>Lê Nguyễn Minh Huy</span>
                 </div>
             </div>
         </div>
     </div>
-    <div class="wsus__mini_cart">
-        <h4>shopping cart <span class="wsus_close_mini_cart"><i class="far fa-times"></i></span></h4>
-        <ul class="mini_cart_wrapper">
-            @foreach (\Cart::getContent() as $sidebarProduct)
-                <li id="mini_cart_{{$sidebarProduct->id}}">
-                    <div class="wsus__cart_img">
-                        <a href="#"><img src="{{asset($sidebarProduct->attributes->image)}}" alt="product" class="img-fluid w-100"></a>
-                        <a class="wsis__del_icon remove_sidebar_product" data-id="{{$sidebarProduct->id}}" href="#" ><i class="fas fa-minus-circle"></i></a>
-                    </div>
-                    <div class="wsus__cart_text">
-                        <a class="wsus__cart_title" href="{{route('product-detail', $sidebarProduct->attributes->slug)}}">{{$sidebarProduct->name}}</a>
-                        <p>
-                            {{$settings->currency_icon}}{{$sidebarProduct->price}}
-                        </p>
-                        <small>Variants total: {{$settings->currency_icon}}{{$sidebarProduct->attributes->variants_total}}</small>
-                        <br>
-                        <small>Qty: {{$sidebarProduct->quantity}}</small>
-                    </div>
-                </li>
-            @endforeach
-            @if (count(\Cart::getContent()) === 0)
-                <li class="text-center">Cart is empty!</li>
-            @endif
-        </ul>
-        <div class="mini_cart_actions ">
-            <h5>sub total <span id="mini_cart_subtotal">{{$settings->currency_icon}}{{getCartTotal()}}</span></h5>
-            <div class="wsus__minicart_btn_area">
-                <a class="common_btn" href="{{route('cart.index')}}">view cart</a>
-                <a class="common_btn" href="{{route('user.checkout')}}">checkout</a>
-            </div>
-        </div>
+</div>
+<div id="header-icon" class="header__icon --darkMode">
+    <!-- tao tạo ra header-acount là absolute của header-iocon vì mày đã set -->
+    <!-- cứng header-icon là justify-content: flex-end nên mấy thẻ con nó ăn theo -->
+    <div class="header-acount">
+        <span class="">chào mừng user</span>
     </div>
 
-</header>
+    <div id="user-icon-logout" class="border-square --hide">
+        <span class="icon-exit"></span>
+    </div>
+
+    <div id="User-icon" class="border-square user-icon">
+        <span class="icon-user"></span>
+    </div>
+
+    <div class="border-square cart-icon">
+        <span class="icon-cart"></span>
+    </div>
+
+    <div class="border-square search-icon">
+        <span class="icon-search"></span>
+    </div>
+</div>

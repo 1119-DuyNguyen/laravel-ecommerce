@@ -34,9 +34,9 @@ class DatabaseSeeder extends Seeder
         //data product
         $file_path = __DIR__ . '/seeder.sql';
 
-        // \DB::unprepared(
-        //     file_get_contents($file_path)
-        // );
+        \DB::unprepared(
+            file_get_contents($file_path)
+        );
         //         data all
 
     }
