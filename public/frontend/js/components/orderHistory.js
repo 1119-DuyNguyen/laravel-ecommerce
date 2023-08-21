@@ -8,10 +8,11 @@ import {
 } from '../library/display.js';
 import { openformAccount } from './formAccount.js';
 var data = new Data();
-const orderHistory = document.getElementById('order-history');
 
-var orderHistoryContent = orderHistory.querySelector('.overview-history');
 export function openOrderHistory() {
+    const orderHistory = document.getElementById('order-history');
+
+    var orderHistoryContent = orderHistory.querySelector('.overview-history');
     var currentUser = data.getCurrentUser();
     if (currentUser) {
         //setup

@@ -14,14 +14,24 @@ class PageController extends Controller
 {
     public function about()
     {
-        $about = About::first();
-        return view('frontend.pages.about', compact('about'));
+        return view('frontend.pages.about');
+    }
+    public function order()
+    {
+        return view('frontend.pages.order');
+    }
+    public function shop()
+    {
+        return view('frontend.pages.shop');
     }
 
     public function termsAndCondition()
     {
-        $terms = TermsAndCondition::first();
-        return view('frontend.pages.terms-and-condition', compact('terms'));
+        return view('frontend.pages.terms-and-condition');
+    }
+    public function privacyPolicy()
+    {
+        return view('frontend.pages.privacy-policy');
     }
 
     public function contact()

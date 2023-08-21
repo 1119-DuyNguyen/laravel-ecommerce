@@ -5,12 +5,10 @@
 @endsection
 
 @section('content')
-
-
     <!--============================
         ORDER PAGE START
     ==============================-->
-    <div id="order-page" class="--hide">
+    <div id="order-page">
         <div class="order-history">
             <a>Lịch sử mua hàng</a>
         </div>

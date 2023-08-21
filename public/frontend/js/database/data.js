@@ -1,6 +1,6 @@
 
 let dataBillJson=[];
-fetch('./bill.json')
+fetch('./frontend/js/database/bill.json')
     .then((response) => response.json())
     .then((json) => dataBillJson=json);
 export function Data() {
@@ -40,7 +40,7 @@ export function Data() {
         data[id].price = obj.price;
         data[id].tag = obj.tag;
         if (obj.image.length > 0)
-            data[id].image = 'public/img/ngoiNhaCafe/default.jpg';
+            data[id].image = 'frontend/images/ngoiNhaCafe/default.jpg';
         setDataImgs(data);
     };
     this.removeUser = function (idToRemove) {
@@ -57,7 +57,7 @@ export function Data() {
     this.addImgs = function (obj) {
         let data = this.getDataImgs();
         obj.currency = 'đ';
-        obj.image = 'public/img/ngoiNhaCafe/default.jpg';
+        obj.image = 'frontend/images/ngoiNhaCafe/default.jpg';
         data.push(obj);
         setDataImgs(data);
     };
@@ -265,7 +265,7 @@ totalprice : 5700000
                     title: 'Cà Phê Sữa Đá',
                     description:
                         'Cà phê Đắk Lắk nguyên chất được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà, hài hòa giữa vị ngọt đầu lưỡi và vị đắng thanh thoát nơi hậu vị.',
-                    image: 'public/img/ngoiNhaCafe/CPhSa.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/CPhSa.jpg',
                     id: 1,
                     price: 29000,
                     tag: 'Cà Phê Việt Nam',
@@ -276,7 +276,7 @@ totalprice : 5700000
                     title: 'Cà Phê Sữa Nóng',
                     description:
                         'Cà phê được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà, hài hòa giữa vị ngọt đầu lưỡi và vị đắng thanh thoát nơi hậu vị.',
-                    image: 'public/img/ngoiNhaCafe/CPhSaNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/CPhSaNng.jpg',
                     id: 2,
                     price: 35000,
                     tag: 'Cà Phê Việt Nam',
@@ -287,7 +287,7 @@ totalprice : 5700000
                     title: 'Bạc Sỉu',
                     description:
                         'Bạc sỉu chính là "Ly sữa trắng kèm một chút cà phê". Thức uống này rất phù hợp những ai vừa muốn trải nghiệm chút vị đắng của cà phê vừa muốn thưởng thức vị ngọt béo ngậy từ sữa.',
-                    image: 'public/img/ngoiNhaCafe/BcSu.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/BcSu.jpg',
                     id: 3,
                     price: 29000,
                     tag: 'Cà Phê Việt Nam',
@@ -298,7 +298,7 @@ totalprice : 5700000
                     title: 'Bạc Sỉu Nóng',
                     description:
                         'Bạc sỉu chính là "Ly sữa trắng kèm một chút cà phê". Thức uống này rất phù hợp những ai vừa muốn trải nghiệm chút vị đắng của cà phê vừa muốn thưởng thức vị ngọt béo ngậy từ sữa.',
-                    image: 'public/img/ngoiNhaCafe/BcSuNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/BcSuNng.jpg',
                     id: 4,
                     price: 35000,
                     tag: 'Cà Phê Việt Nam',
@@ -309,7 +309,7 @@ totalprice : 5700000
                     title: 'Cà Phê Đen Đá',
                     description:
                         'Không ngọt ngào như Bạc sỉu hay Cà phê sữa, Cà phê đen mang trong mình phong vị trầm lắng, thi vị hơn. Người ta thường phải ngồi rất lâu mới cảm nhận được hết hương thơm ngào ngạt, phảng phất mùi cacao và cái đắng mượt mà trôi tuột xuống vòm họng.',
-                    image: 'public/img/ngoiNhaCafe/CPhen.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/CPhen.jpg',
                     id: 5,
                     price: 29000,
                     tag: 'Cà Phê Việt Nam',
@@ -320,7 +320,7 @@ totalprice : 5700000
                     title: 'Cà Phê Đen Nóng',
                     description:
                         'Không ngọt ngào như Bạc sỉu hay Cà phê sữa, Cà phê đen mang trong mình phong vị trầm lắng, thi vị hơn. Người ta thường phải ngồi rất lâu mới cảm nhận được hết hương thơm ngào ngạt, phảng phất mùi cacao và cái đắng mượt mà trôi tuột xuống vòm họng.',
-                    image: 'public/img/ngoiNhaCafe/CPhenNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/CPhenNng.jpg',
                     id: 6,
                     price: 35000,
                     tag: 'Cà Phê Việt Nam',
@@ -331,7 +331,7 @@ totalprice : 5700000
                     title: 'Cà Phê Sữa Đá Chai Fresh 250ML',
                     description:
                         'Vẫn là hương vị cà phê sữa đậm đà quen thuộc của The Coffee House nhưng khoác lên mình một chiếc áo mới tiện lợi hơn, tiết kiệm hơn phù hợp với bình thường mới, giúp bạn tận hưởng một ngày dài trọn vẹn. *Sản phẩm dùng ngon nhất trong ngày. *Sản phẩm mặc định mức đường và không đá.',
-                    image: 'public/img/ngoiNhaCafe/CPhSaChaiFresh250ML.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/CPhSaChaiFresh250ML.jpg',
                     id: 7,
                     price: 75000,
                     tag: 'Cà Phê Việt Nam',
@@ -342,7 +342,7 @@ totalprice : 5700000
                     title: 'Caramel Macchiato Đá',
                     description:
                         'Caramel Macchiato sẽ mang đến một sự ngạc nhiên thú vị khi vị thơm béo của bọt sữa, sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng và vị ngọt đậm của sốt caramel được gói gọn trong một tách cà phê.',
-                    image: 'public/img/ngoiNhaCafe/CaramelMacchiato.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/CaramelMacchiato.jpg',
                     id: 8,
                     price: 49000,
                     tag: 'Cà Phê Máy',
@@ -353,7 +353,7 @@ totalprice : 5700000
                     title: 'Caramel Macchiato Nóng',
                     description:
                         'Caramel Macchiato sẽ mang đến một sự ngạc nhiên thú vị khi vị thơm béo của bọt sữa, sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng và vị ngọt đậm của sốt caramel được gói gọn trong một tách cà phê.',
-                    image: 'public/img/ngoiNhaCafe/CaramelMacchiatoNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/CaramelMacchiatoNng.jpg',
                     id: 9,
                     price: 49000,
                     tag: 'Cà Phê Máy',
@@ -364,7 +364,7 @@ totalprice : 5700000
                     title: 'Latte Đá',
                     description:
                         'Một sự kết hợp tinh tế giữa vị đắng cà phê Espresso nguyên chất hòa quyện cùng vị sữa nóng ngọt ngào, bên trên là một lớp kem mỏng nhẹ tạo nên một tách cà phê hoàn hảo về hương vị lẫn nhãn quan.',
-                    image: 'public/img/ngoiNhaCafe/Latte.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/Latte.jpg',
                     id: 10,
                     price: 49000,
                     tag: 'Cà Phê Máy',
@@ -375,7 +375,7 @@ totalprice : 5700000
                     title: 'Latte Nóng',
                     description:
                         'Một sự kết hợp tinh tế giữa vị đắng cà phê Espresso nguyên chất hòa quyện cùng vị sữa nóng ngọt ngào, bên trên là một lớp kem mỏng nhẹ tạo nên một tách cà phê hoàn hảo về hương vị lẫn nhãn quan.',
-                    image: 'public/img/ngoiNhaCafe/LatteNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/LatteNng.jpg',
                     id: 11,
                     price: 49000,
                     tag: 'Cà Phê Máy',
@@ -386,7 +386,7 @@ totalprice : 5700000
                     title: 'Americano Đá',
                     description:
                         'Americano được pha chế bằng cách pha thêm nước với tỷ lệ nhất định vào tách cà phê Espresso, từ đó mang lại hương vị nhẹ nhàng và giữ trọn được mùi hương cà phê đặc trưng.',
-                    image: 'public/img/ngoiNhaCafe/Americano.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/Americano.jpg',
                     id: 12,
                     price: 39000,
                     tag: 'Cà Phê Máy',
@@ -397,7 +397,7 @@ totalprice : 5700000
                     title: 'Americano Nóng',
                     description:
                         'Americano được pha chế bằng cách pha thêm nước với tỷ lệ nhất định vào tách cà phê Espresso, từ đó mang lại hương vị nhẹ nhàng và giữ trọn được mùi hương cà phê đặc trưng.',
-                    image: 'public/img/ngoiNhaCafe/AmericanoNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/AmericanoNng.jpg',
                     id: 13,
                     price: 39000,
                     tag: 'Cà Phê Máy',
@@ -408,7 +408,7 @@ totalprice : 5700000
                     title: 'Cappuccino Đá',
                     description:
                         'Capuchino là thức uống hòa quyện giữa hương thơm của sữa, vị béo của bọt kem cùng vị đậm đà từ cà phê Espresso. Tất cả tạo nên một hương vị đặc biệt, một chút nhẹ nhàng, trầm lắng và tinh tế.',
-                    image: 'public/img/ngoiNhaCafe/Cappuccino.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/Cappuccino.jpg',
                     id: 14,
                     price: 49000,
                     tag: 'Cà Phê Máy',
@@ -419,7 +419,7 @@ totalprice : 5700000
                     title: 'Cappuccino Nóng',
                     description:
                         'Capuchino là thức uống hòa quyện giữa hương thơm của sữa, vị béo của bọt kem cùng vị đậm đà từ cà phê Espresso. Tất cả tạo nên một hương vị đặc biệt, một chút nhẹ nhàng, trầm lắng và tinh tế.',
-                    image: 'public/img/ngoiNhaCafe/CappuccinoNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/CappuccinoNng.jpg',
                     id: 15,
                     price: 49000,
                     tag: 'Cà Phê Máy',
@@ -430,7 +430,7 @@ totalprice : 5700000
                     title: 'Espresso Đá',
                     description:
                         'Một tách Espresso nguyên bản được bắt đầu bởi những hạt Arabica chất lượng, phối trộn với tỉ lệ cân đối hạt Robusta, cho ra vị ngọt caramel, vị chua dịu và sánh đặc.',
-                    image: 'public/img/ngoiNhaCafe/Espresso.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/Espresso.jpg',
                     id: 16,
                     price: 45000,
                     tag: 'Cà Phê Máy',
@@ -441,7 +441,7 @@ totalprice : 5700000
                     title: 'Espresso Nóng',
                     description:
                         'Một tách Espresso nguyên bản được bắt đầu bởi những hạt Arabica chất lượng, phối trộn với tỉ lệ cân đối hạt Robusta, cho ra vị ngọt caramel, vị chua dịu và sánh đặc.',
-                    image: 'public/img/ngoiNhaCafe/EspressoNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/EspressoNng.jpg',
                     id: 17,
                     price: 39000,
                     tag: 'Cà Phê Máy',
@@ -452,7 +452,7 @@ totalprice : 5700000
                     title: 'Cold Brew Sữa Tươi',
                     description:
                         'Thanh mát và cân bằng với hương vị cà phê nguyên bản 100% Arabica Cầu Đất cùng sữa tươi thơm béo cho từng ngụm tròn vị, hấp dẫn.',
-                    image: 'public/img/ngoiNhaCafe/ColdBrewSaTi.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/ColdBrewSaTi.jpg',
                     id: 18,
                     price: 45000,
                     tag: 'Cold Brew',
@@ -463,7 +463,7 @@ totalprice : 5700000
                     title: 'Cold Brew Truyền Thống',
                     description:
                         'Tại The Coffee House, Cold Brew được ủ và phục vụ mỗi ngày từ 100% hạt Arabica Cầu Đất với hương gỗ thông, hạt dẻ, nốt sô-cô-la đặc trưng, thoang thoảng hương khói nhẹ giúp Cold Brew giữ nguyên vị tươi mới.',
-                    image: 'public/img/ngoiNhaCafe/ColdBrewTruynThng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/ColdBrewTruynThng.jpg',
                     id: 19,
                     price: 45000,
                     tag: 'Cold Brew',
@@ -474,7 +474,7 @@ totalprice : 5700000
                     title: 'Trà Long Nhãn Hạt Sen',
                     description:
                         'Thức uống mang hương vị của nhãn, của sen, của trà Oolong đầy thanh mát cho tất cả các thành viên trong dịp Tết này. An lành, thư thái và đậm đà chính là những gì The Coffee House mong muốn gửi trao đến bạn và gia đình.',
-                    image: 'public/img/ngoiNhaCafe/TrLongNhnHtSen.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrLongNhnHtSen.jpg',
                     id: 20,
                     price: 49000,
                     tag: 'Trà trái cây',
@@ -485,7 +485,7 @@ totalprice : 5700000
                     title: 'Trà Đào Cam Sả - Đá',
                     description:
                         'Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.',
-                    image: 'public/img/ngoiNhaCafe/TroCamS.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TroCamS.jpg',
                     id: 21,
                     price: 49000,
                     tag: 'Trà trái cây',
@@ -496,7 +496,7 @@ totalprice : 5700000
                     title: 'Trà Đào Cam Sả - Nóng',
                     description:
                         'Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.',
-                    image: 'public/img/ngoiNhaCafe/TroCamSNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TroCamSNng.jpg',
                     id: 22,
                     price: 55000,
                     tag: 'Trà trái cây',
@@ -507,7 +507,7 @@ totalprice : 5700000
                     title: 'Trà Hạt Sen - Đá',
                     description:
                         'Nền trà oolong hảo hạng kết hợp cùng hạt sen tươi, bùi bùi và lớp foam cheese béo ngậy. Trà hạt sen là thức uống thanh mát, nhẹ nhàng phù hợp cho cả buổi sáng và chiều tối.',
-                    image: 'public/img/ngoiNhaCafe/TrHtSen.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrHtSen.jpg',
                     id: 23,
                     price: 49000,
                     tag: 'Trà trái cây',
@@ -518,7 +518,7 @@ totalprice : 5700000
                     title: 'Trà Hạt Sen - Nóng',
                     description:
                         'Nền trà oolong hảo hạng kết hợp cùng hạt sen tươi, bùi bùi thơm ngon. Trà hạt sen là thức uống thanh mát, nhẹ nhàng phù hợp cho cả buổi sáng và chiều tối.',
-                    image: 'public/img/ngoiNhaCafe/TrHtSenNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrHtSenNng.jpg',
                     id: 24,
                     price: 55000,
                     tag: 'Trà trái cây',
@@ -529,7 +529,7 @@ totalprice : 5700000
                     title: 'Trà Long Nhãn Hạt Chia',
                     description:
                         'Vị nhãn ngọt, tươi mát đặc trưng hoà quyện tinh tế cùng vị trà oolong hảo hạng và hạt chia mang đến cho bạn một thức uống không chỉ thơm ngon mà còn bổ dưỡng.',
-                    image: 'public/img/ngoiNhaCafe/TrLongNhnHtChia.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrLongNhnHtChia.jpg',
                     id: 25,
                     price: 49000,
                     tag: 'Trà trái cây',
@@ -540,7 +540,7 @@ totalprice : 5700000
                     title: 'Trà Long Nhãn Hạt Chia (Nóng)',
                     description:
                         'Vị nhãn ngọt, tươi mát đặc trưng hoà quyện tinh tế cùng vị trà oolong hảo hạng và hạt chia mang đến cho bạn một thức uống không chỉ thơm ngon mà còn bổ dưỡng.',
-                    image: 'public/img/ngoiNhaCafe/TrLongNhnHtChiaNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrLongNhnHtChiaNng.jpg',
                     id: 26,
                     price: 55000,
                     tag: 'Trà trái cây',
@@ -551,7 +551,7 @@ totalprice : 5700000
                     title: 'Trà Đào Cam Sả Chai Fresh 500ML',
                     description:
                         'Với phiên bản chai fresh 500ml, thức uống "best seller" đỉnh cao mang một diện mạo tươi mới, tiện lợi, phù hợp với bình thường mới và vẫn giữ nguyên vị thanh ngọt của đào, vị chua dịu của cam vàng nguyên vỏ và vị trà đen thơm lừng ly Trà đào cam sả nguyên bản. *Sản phẩm dùng ngon nhất trong ngày. *Sản phẩm mặc định mức đường và không đá.',
-                    image: 'public/img/ngoiNhaCafe/TroCamSChaiFresh500ML.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TroCamSChaiFresh500ML.jpg',
                     id: 27,
                     price: 105000,
                     tag: 'Trà trái cây',
@@ -562,7 +562,7 @@ totalprice : 5700000
                     title: 'Trà Đen Macchiato',
                     description:
                         'Trà đen được ủ mới mỗi ngày, giữ nguyên được vị chát mạnh mẽ đặc trưng của lá trà, phủ bên trên là lớp Macchiato "homemade" bồng bềnh quyến rũ vị phô mai mặn mặn mà béo béo.',
-                    image: 'public/img/ngoiNhaCafe/TrenMacchiato.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrenMacchiato.jpg',
                     id: 28,
                     price: 55000,
                     tag: 'Trà sữa Macchiato',
@@ -573,7 +573,7 @@ totalprice : 5700000
                     title: 'Hồng Trà Sữa Trân Châu',
                     description:
                         'Thêm chút ngọt ngào cho ngày mới với hồng trà nguyên lá, sữa thơm ngậy được cân chỉnh với tỉ lệ hoàn hảo, cùng trân châu trắng dai giòn có sẵn để bạn tận hưởng từng ngụm trà sữa ngọt ngào thơm ngậy thiệt đã.',
-                    image: 'public/img/ngoiNhaCafe/HngTrSaTrnChu.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HngTrSaTrnChu.jpg',
                     id: 29,
                     price: 55000,
                     tag: 'Trà sữa Macchiato',
@@ -584,7 +584,7 @@ totalprice : 5700000
                     title: 'Hồng Trà Sữa Nóng',
                     description:
                         'Từng ngụm trà chuẩn gu ấm áp, đậm đà beo béo bởi lớp sữa tươi chân ái hoà quyện.  Trà đen nguyên lá âm ấm dịu nhẹ, quyện cùng lớp sữa thơm béo khó lẫn - hương vị ấm áp chuẩn gu trà, cho từng ngụm nhẹ nhàng, ngọt dịu lưu luyến mãi nơi cuống họng.',
-                    image: 'public/img/ngoiNhaCafe/HngTrSaNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HngTrSaNng.jpg',
                     id: 30,
                     price: 55000,
                     tag: 'Trà sữa Macchiato',
@@ -595,7 +595,7 @@ totalprice : 5700000
                     title: 'Trà sữa Oolong Nướng Trân Châu',
                     description:
                         'Hương vị chân ái đúng gu đậm đà với trà oolong được “sao” (nướng) lâu hơn cho hương vị đậm đà, hòa quyện với sữa thơm béo mang đến cảm giác mát lạnh, lưu luyến vị trà sữa đậm đà nơi vòm họng.',
-                    image: 'public/img/ngoiNhaCafe/TrsaOolongNngTrnChu.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrsaOolongNngTrnChu.jpg',
                     id: 31,
                     price: 55000,
                     tag: 'Trà sữa Macchiato',
@@ -606,7 +606,7 @@ totalprice : 5700000
                     title: 'Trà sữa Oolong Nướng (Nóng)',
                     description:
                         'Đậm đà chuẩn gu và ấm nóng - bởi lớp trà oolong nướng đậm vị hoà cùng lớp sữa thơm béo. Hương vị chân ái đúng gu đậm đà - trà oolong được "sao" (nướng) lâu hơn cho vị đậm đà, hoà quyện với sữa thơm ngậy. Cho từng ngụm ấm áp, lưu luyến vị trà sữa đậm đà mãi nơi cuống họng.',
-                    image: 'public/img/ngoiNhaCafe/TrsaOolongNngNng.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrsaOolongNngNng.jpg',
                     id: 32,
                     price: 55000,
                     tag: 'Trà sữa Macchiato',
@@ -617,7 +617,7 @@ totalprice : 5700000
                     title: 'Trà Sữa Mắc Ca Trân Châu',
                     description:
                         'Mỗi ngày với The Coffee House sẽ là điều tươi mới hơn với sữa hạt mắc ca thơm ngon, bổ dưỡng quyện cùng nền trà oolong cho vị cân bằng, ngọt dịu đi kèm cùng Trân châu trắng giòn dai mang lại cảm giác “đã” trong từng ngụm trà sữa.',
-                    image: 'public/img/ngoiNhaCafe/TrSaMcCaTrnChu.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrSaMcCaTrnChu.jpg',
                     id: 33,
                     price: 55000,
                     tag: 'Trà sữa Macchiato',
@@ -628,7 +628,7 @@ totalprice : 5700000
                     title: 'Hồng Trà Latte Macchiato',
                     description:
                         'Sự kết hợp hoàn hảo bởi hồng trà dịu nhẹ và sữa tươi, nhấn nhá thêm lớp macchiato trứ danh của The Coffee House mang đến cho bạn hương vị trà sữa đúng gu tinh tế và healthy.',
-                    image: 'public/img/ngoiNhaCafe/HngTrLatteMacchiato.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HngTrLatteMacchiato.jpg',
                     id: 34,
                     price: 55000,
                     tag: 'Trà sữa Macchiato',
@@ -639,7 +639,7 @@ totalprice : 5700000
                     title: 'Trà Sữa Oolong Nướng Trân Châu Chai Fresh 500ML',
                     description:
                         'Phiên bản chai fresh 500ml mới, The Coffee House tin rằng với diện mạo mới: tiện lợi và phù hợp với bình thường mới này, các tín đồ trà sữa sẽ được thưởng thức hương vị đậm đà, hòa quyện với sữa thơm béo mang đến cảm giác mát lạnh ở bất cứ nơi đâu. *Sản phẩm dùng ngon nhất trong ngày. *Sản phẩm mặc định mức đường và không đá.',
-                    image: 'public/img/ngoiNhaCafe/TrSaOolongNngTrnChuChaiFresh500ML.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/TrSaOolongNngTrnChuChaiFresh500ML.jpg',
                     id: 35,
                     price: 95000,
                     tag: 'Trà sữa Macchiato',
@@ -649,7 +649,7 @@ totalprice : 5700000
                 {
                     title: 'Hi-Tea Xoài Aloe Vera',
                     description: '',
-                    image: 'public/img/ngoiNhaCafe/HiTeaXoiAloeVera.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HiTeaXoiAloeVera.jpg',
                     id: 36,
                     price: 49000,
                     tag: 'Hi-Tea Trà',
@@ -660,7 +660,7 @@ totalprice : 5700000
                     title: 'Hi-Tea Dâu Tây Mận Muối Aloe Vera',
                     description:
                         'Sự kết hợp độc đáo giữa 3 sắc thái hương vị khác nhau: trà hoa Hibiscus chua thanh, Mận muối mặn mặn và Dâu tây tươi Đà Lạt cô đặc ngọt dịu. Ngoài ra, topping Aloe Vera tươi mát, ngon ngất ngây, đẹp đắm say, hứa hẹn sẽ khuấy đảo hè này.',
-                    image: 'public/img/ngoiNhaCafe/HiTeaDuTyMnMuiAloeVera.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HiTeaDuTyMnMuiAloeVera.jpg',
                     id: 37,
                     price: 49000,
                     tag: 'Hi-Tea Trà',
@@ -671,7 +671,7 @@ totalprice : 5700000
                     title: 'HI-TEA Yuzu Trân Châu',
                     description:
                         'Không chỉ nổi bật với sắc đỏ đặc trưng từ trà hoa Hibiscus, Hi-Tea Yuzu còn gây ấn tượng với topping Yuzu (quýt Nhật) lạ miệng, kết hợp cùng trân châu trắng dai giòn sần sật, nhai vui vui.',
-                    image: 'public/img/ngoiNhaCafe/HITEAYuzuTrnChu.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HITEAYuzuTrnChu.jpg',
                     id: 38,
                     price: 49000,
                     tag: 'Hi-Tea Trà',
@@ -682,7 +682,7 @@ totalprice : 5700000
                     title: 'Hi-Tea Vải',
                     description:
                         'Chút ngọt ngào của Vải, mix cùng vị chua thanh tao từ trà hoa Hibiscus, mang đến cho bạn thức uống đúng chuẩn vừa ngon, vừa healthy.',
-                    image: 'public/img/ngoiNhaCafe/HiTeaVi.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HiTeaVi.jpg',
                     id: 39,
                     price: 49000,
                     tag: 'Hi-Tea Trà',
@@ -693,7 +693,7 @@ totalprice : 5700000
                     title: 'Hi-Tea Đào',
                     description:
                         'Sự kết hợp ăn ý giữa Đào cùng trà hoa Hibiscus, tạo nên tổng thể hài hoà dễ gây “thương nhớ” cho team thích món thanh mát, có vị chua nhẹ.',
-                    image: 'public/img/ngoiNhaCafe/HiTeao.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HiTeao.jpg',
                     id: 40,
                     price: 49000,
                     tag: 'Hi-Tea Trà',
@@ -704,7 +704,7 @@ totalprice : 5700000
                     title: 'Hi-Tea Đá Tuyết Xoài Đào',
                     description:
                         'Những miếng đào vàng ươm kết hợp với đá tuyết vị xoài mát lành, cùng nền trà hoa Hibiscus chua dịu đem đến cảm giác lạ miệng, hấp dẫn đến tận ngụm cuối cùng.',
-                    image: 'public/img/ngoiNhaCafe/HiTeaTuytXoio.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HiTeaTuytXoio.jpg',
                     id: 41,
                     price: 55000,
                     tag: 'Hi-Tea Đá Tuyết',
@@ -715,7 +715,7 @@ totalprice : 5700000
                     title: 'Hi-Tea Đá Tuyết Yuzu Vải',
                     description:
                         'Vị trà hoa Hibiscus chua chua, kết hợp cùng đá tuyết Yuzu mát lạnh tái tê, thêm miếng vải căng mọng, ngọt ngào sẽ khiến bạn thích thú ngay từ lần thử đầu tiên.',
-                    image: 'public/img/ngoiNhaCafe/HiTeaTuytYuzuVi.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HiTeaTuytYuzuVi.jpg',
                     id: 42,
                     price: 55000,
                     tag: 'Hi-Tea Đá Tuyết',
@@ -726,7 +726,7 @@ totalprice : 5700000
                     title: 'Hi-Tea Phúc Bồn Tử Bling Bling',
                     description:
                         'Nền trà Hibiscus thanh mát, quyện vị chua chua ngọt ngọt của phúc bồn tử 100% tự nhiên cùng quýt mọng nước mang đến cảm giác sảng khoái tức thì. Đặc biệt, bạn đừng bỏ lỡ trải nghiệm “khuấy để thấy trăng” với hiệu ứng bling bling lạ mắt, được làm từ bột nhũ vàng dùng trong thực phẩm.',
-                    image: 'public/img/ngoiNhaCafe/HiTeaPhcBnTBlingBling.jpg',
+                    image: 'frontend/images/ngoiNhaCafe/HiTeaPhcBnTBlingBling.jpg',
                     id: 43,
                     price: 65000,
                     tag: 'Hi-Tea Bling Bling',

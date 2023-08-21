@@ -10,12 +10,12 @@
     <!--============================
         SHOP PAGE START
     ==============================-->
-    <div id="main-store" class="main-store --hide">
+    <div id="main-store" class="main-store">
         <div class="story-container">
             <div
                 class="story-contact"
                 style="
-                    background: url(./public/img/about-us/Coffee-Wallpaper-Background.jpg)
+                    background: url(./frontend/images/about-us/Coffee-Wallpaper-Background.jpg)
                         no-repeat right top;
                     background-size: cover;
                 "

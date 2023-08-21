@@ -182,17 +182,25 @@ function menuProductList() {
 
     headerBtn.forEach(function (element, index) {
         element.addEventListener('click', function () {
-            callMenu(index + 1);
-            openPage(productContainer);
-            window.scrollTo(0, 0);
+            if (element.dataset.location === '/') {
+                callMenu(index + 1);
+                openPage(productContainer);
+                window.scrollTo(0, 0);
+            } else {
+                window.location.href = '/';
+            }
         });
     });
 
     menuBtn.forEach(function (element, index) {
         element.addEventListener('click', function () {
-            openPage(productContainer);
-            callMenu(index);
-            window.scrollTo(0, 0);
+            if (element.dataset.location === '/') {
+                openPage(productContainer);
+                callMenu(index);
+                window.scrollTo(0, 0);
+            } else {
+                window.location.href = '/';
+            }
         });
     });
 
@@ -210,32 +218,36 @@ function footerNavigation() {
     const productFooterBtn = document.querySelector('.f-product-btn');
 
     dksdBtn.addEventListener('click', function () {
-        openPage(dksd);
-
-        window.scrollTo(0, 0);
+        // openPage(dksd);
+        window.location.href = "/terms-and-conditions";
+        // window.scrollTo(0, 0);
     });
 
     csbmttBtn.addEventListener('click', function () {
-        openPage(csbmtt);
-        window.scrollTo(0, 0);
+        // openPage(csbmtt);
+        // window.scrollTo(0, 0);
+        window.location.href = "/privacy-policy";
     });
 
     mainStoreBtn.addEventListener('click', function () {
-        openPage(mainStore);
-
-        window.scrollTo(0, 0);
+        // openPage(mainStore);
+        window.location.href = "/shop";
+        // window.scrollTo(0, 0);
     });
 
     aboutUsFooter.addEventListener('click', function () {
-        openPage(aboutUs);
-
-        window.scrollTo(0, 0);
+        // openPage(aboutUs);
+        window.location.href = "/about";
+        // window.scrollTo(0, 0);
     });
 
     productFooterBtn.addEventListener('click', function () {
-        openPage(productContainer);
-
-        callMenu(0);
-        window.scrollTo(0, 0);
+        if (productFooterBtn.dataset.location === '/') {
+            openPage(productContainer);
+            callMenu(0);
+            window.scrollTo(0, 0);
+        } else {
+            window.location.href = '/';
+        }
     });
 }

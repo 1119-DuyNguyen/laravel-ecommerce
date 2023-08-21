@@ -14,7 +14,7 @@
         <div class="col">
             <p class="col-head footer-header">Giới thiệu</p>
             <p class="f-about-us-btn">Về chúng tôi</p>
-            <p class="f-product-btn">Sản phẩm</p>
+            <p class="f-product-btn" data-location='{{ request()->path() }}'>Sản phẩm</p>
         </div>
         <div class="col">
             <p class="col-head footer-header">Thông tin</p>

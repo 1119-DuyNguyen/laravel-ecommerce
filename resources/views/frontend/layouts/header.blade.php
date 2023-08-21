@@ -64,7 +64,7 @@
                                         >
                                             <a
                                                 class="text-color menu-btn"
-                                                href="#"
+                                                href="#" data-location='{{ request()->path() }}'
                                                 >Tất cả</a
                                             >
                                         </li>
@@ -74,7 +74,7 @@
                                         >
                                             <a
                                                 class="text-color menu-btn"
-                                                href="#"
+                                                href="#" data-location='{{ request()->path() }}'
                                                 >Cà phê</a
                                             >
                                         </li>
@@ -84,7 +84,7 @@
                                         >
                                             <a
                                                 class="text-color menu-btn"
-                                                href="#"
+                                                href="#" data-location='{{ request()->path() }}'
                                                 >Trà</a
                                             >
                                         </li>
@@ -94,7 +94,7 @@
                                         >
                                             <a
                                                 class="font-family text-color menu-btn"
-                                                href="#"
+                                                href="#" data-location='{{ request()->path() }}'
                                                 >Hi-Tea Healthy</a
                                             >
                                         </li>

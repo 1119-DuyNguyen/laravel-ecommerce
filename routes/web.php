@@ -81,8 +81,14 @@ Route::get('newsletter-verify/{token}', [NewsletterController::class, 'newsLette
 
 /** about page route */
 Route::get('about', [PageController::class, 'about'])->name('about');
+/** order page route */
+Route::get('order', [PageController::class, 'order'])->name('order');
+/** shop page route */
+Route::get('shop', [PageController::class, 'shop'])->name('shop');
 /** terms and conditions page route */
 Route::get('terms-and-conditions', [PageController::class, 'termsAndCondition'])->name('terms-and-conditions');
+/** privacy policy page route */
+Route::get('privacy-policy', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
 /** contact route */
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
 Route::post('contact', [PageController::class, 'handleContactForm'])->name('handle-contact-form');

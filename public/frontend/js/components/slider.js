@@ -15,13 +15,13 @@ export function onLoad() {
     <div class="slider-pictures">
         <div class="slider-main">
             <div class="slider-picture-item">
-                <img src="./public/img/slider_1.webp" alt="" />
+                <img src="./frontend/images/slider_1.webp" alt="" />
             </div>
             <div class="slider-picture-item">
-                <img src="./public/img/slider_2.webp" alt="" />
+                <img src="./frontend/images/slider_2.webp" alt="" />
             </div>
             <div class="slider-picture-item">
-                <img src="./public/img/slider_3.webp" alt="" />
+                <img src="./frontend/images/slider_3.webp" alt="" />
             </div>
         </div>
     </div>
@@ -37,13 +37,13 @@ export function onLoad() {
     <div class="slider-pictures">
         <div class="slider-main">
             <div class="slider-picture-item">
-                <img src="./public/img/mobile_slider_1.webp" alt="" />
+                <img src="./frontend/images/mobile_slider_1.webp" alt="" />
             </div>
             <div class="slider-picture-item">
-                <img src="./public/img/mobile_slider_2.webp" alt="" />
+                <img src="./frontend/images/mobile_slider_2.webp" alt="" />
             </div>
             <div class="slider-picture-item">
-                <img src="./public/img/mobile_slider_3.webp" alt="" />
+                <img src="./frontend/images/mobile_slider_3.webp" alt="" />
             </div>
         </div>
     </div>

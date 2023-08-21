@@ -3,14 +3,21 @@ import { openformAccount } from './formAccount.js';
 import { openOrderHistory } from './orderHistory.js';
 import { toast } from './toast.js';
 const data = new Data();
-const orderPage = document.getElementById('order-page');
+let orderPage, cartTable, totalPriceElement, btnPurchare, btnDelete;
+try {
+    orderPage = document.getElementById('order-page');
 
-const cartTable = orderPage.querySelector('.cart-table');
-const totalPriceElement = orderPage.querySelector('.cart-total-price');
-//btn
+    cartTable = orderPage.querySelector('.cart-table');
+    totalPriceElement = orderPage.querySelector('.cart-total-price');
+    //btn
 
-const btnPurchare = orderPage.querySelector('.btn-purchased');
-const btnDelete = orderPage.querySelector('.btn-deleted');
+    btnPurchare = orderPage.querySelector('.btn-purchased');
+    btnDelete = orderPage.querySelector('.btn-deleted');
+
+    openCartPage();
+} catch (error) {
+    // not in the order page
+}
 
 var isInit = false;
 export function openCartPage() {

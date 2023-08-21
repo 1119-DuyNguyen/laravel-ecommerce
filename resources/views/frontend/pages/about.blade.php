@@ -16,7 +16,7 @@
                 <div
                     class="story-contact"
                     style="
-                        background: url(./public/img/about-us/Coffee-Wallpaper-Background.jpg)
+                        background: url(./frontend/images/about-us/Coffee-Wallpaper-Background.jpg)
                             no-repeat right top;
                         background-size: cover;
                     "
@@ -92,7 +92,7 @@
                     <div class="our-team-images">
                         <div class="our-team-img-1">
                             <img
-                                src="./public/img/about-us/team-1.jpg"
+                                src="./frontend/images/about-us/team-1.jpg"
                                 width="300"
                                 alt="Team"
                             />
@@ -101,7 +101,7 @@
                         </div>
                         <div class="our-team-img-2">
                             <img
-                                src="./public/img/about-us/team-2.jpg"
+                                src="./frontend/images/about-us/team-2.jpg"
                                 width="300"
                                 alt="Team"
                             />
@@ -112,7 +112,7 @@
                     <div class="our-team-images">
                         <div class="our-team-img-3">
                             <img
-                                src="./public/img/about-us/team-2.jpg"
+                                src="./frontend/images/about-us/team-2.jpg"
                                 width="300"
                                 alt="Team"
                             />
@@ -121,7 +121,7 @@
                         </div>
                         <div class="our-team-img-4">
                             <img
-                                src="./public/img/about-us/team-3.jpg"
+                                src="./frontend/images/about-us/team-3.jpg"
                                 width="300"
                                 alt="Team"
                             />

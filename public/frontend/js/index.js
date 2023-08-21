@@ -6,9 +6,13 @@ import * as homeProduct from './components/homeProduct.js';
 var data = new Data();
 data.initData();
 //order.init(data.getDataImgs());
-navigation.run(data.getDataImgs());
-slider.onLoad();
-homeProduct.run(data.getDataImgs());
+try {
+    navigation.run(data.getDataImgs());
+    slider.onLoad();
+    homeProduct.run(data.getDataImgs());
+} catch (error) {
+    // not in correct page
+}
 
 //darkMode
 

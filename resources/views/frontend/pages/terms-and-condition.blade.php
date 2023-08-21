@@ -9,7 +9,7 @@
     <!--============================
         TERMS AND CONDITIONS PAGE START
     ==============================-->
-    <div id="article1" class="article dksd --hide">
+    <div id="article1" class="article dksd">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
