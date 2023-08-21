@@ -113,9 +113,10 @@ function headerNavigation(dataImgs) {
     }
     if (cartIcon) {
         cartIcon.addEventListener('click', () => {
-            openPage(orderPage);
-            openCartPage();
-            window.scrollTo(0, 0);
+            // openPage(orderPage);
+            // openCartPage();
+            // window.scrollTo(0, 0);
+            window.location.href = '/order';
         });
     }
     if (data.getCurrentUser()) {
