@@ -13,6 +13,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "realrashid/sweet-alert": "^7.0",
+        "reliese/laravel": "^1.2",
         "srmklive/paypal": "~3.0",
         "yajra/laravel-datatables": "10.0"
     },
