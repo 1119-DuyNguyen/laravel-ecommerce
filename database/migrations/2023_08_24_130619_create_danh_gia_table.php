@@ -17,6 +17,7 @@ return new class extends Migration
             $table->unsignedInteger('MaTK')->index('fk_tai_khoan_has_san_pham_tai_khoan1_idx');
             $table->unsignedInteger('MaSP')->index('fk_tai_khoan_has_san_pham_san_pham1_idx');
             $table->float('DanhGia', 10, 0);
+            $table->text('NoiDungDanhGia')->nullable();
 
             $table->primary(['MaTK', 'MaSP']);
         });

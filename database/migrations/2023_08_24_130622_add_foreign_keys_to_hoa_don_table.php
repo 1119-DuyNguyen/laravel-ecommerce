@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('hoa_don', function (Blueprint $table) {
-            $table->foreign(['MaTK'], 'hoadon_ibfk_1')->references(['MaTK'])->on('tai_khoan')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+            $table->foreign(['MaTK'], 'fk_hoa_don_tai_khoan1')->references(['MaTK'])->on('tai_khoan')->onUpdate('NO ACTION')->onDelete('NO ACTION');
             $table->foreign(['MaKM'], 'hoadon_ibfk_2')->references(['MaKM'])->on('khuyen_mai')->onUpdate('NO ACTION')->onDelete('NO ACTION');
             $table->foreign(['MaVC'], 'hoadon_ibfk_3')->references(['MaVC'])->on('van_chuyen')->onUpdate('NO ACTION')->onDelete('NO ACTION');
         });
@@ -28,7 +28,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('hoa_don', function (Blueprint $table) {
-            $table->dropForeign('hoadon_ibfk_1');
+            $table->dropForeign('fk_hoa_don_tai_khoan1');
             $table->dropForeign('hoadon_ibfk_2');
             $table->dropForeign('hoadon_ibfk_3');
         });

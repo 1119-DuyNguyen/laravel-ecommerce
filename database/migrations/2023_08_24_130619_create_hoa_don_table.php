@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('hoa_don', function (Blueprint $table) {
             $table->increments('MaHD');
-            $table->unsignedInteger('MaTK')->index('hoadon_ibfk_1_idx');
             $table->dateTime('NgayLap');
             $table->integer('TongTien');
             $table->unsignedInteger('MaKM')->nullable()->index('MaKM');
             $table->unsignedInteger('MaVC')->nullable()->index('hoadon_ibfk_3_idx');
             $table->unsignedTinyInteger('TrangThai');
+            $table->unsignedInteger('MaTK')->index('fk_hoa_don_tai_khoan1_idx');
         });
     }
 
