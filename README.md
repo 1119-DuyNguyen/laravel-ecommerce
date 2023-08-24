@@ -1,5 +1,6 @@
 # Complete E-commerce website in  Laravel 10
 ## WATERFALL WORKFLOW:
+![water-fall-flow-work drawio](https://github.com/1119-DuyNguyen/laravel-ecommerce/assets/62139508/06bf51d0-99cc-40a9-9d6f-f12e6dcad57d)
 
 ## DOCS:
 | DOCS | LINK |
