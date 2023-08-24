@@ -16,6 +16,7 @@
         <title>
             @yield('title',"e-commerce")
         </title>
+        <link rel="stylesheet" href="{{asset('frontend/bootstrap/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('frontend/css/normalize.css')}}" />
         <link rel="stylesheet" href="{{asset('frontend/css/icomoon/style.css')}}" />
         <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}" />
@@ -293,5 +294,8 @@
             FOOTER END
         ==============================-->
     </body>
+    <script src="{{asset('frontend/bootstrap/js/bootstrap.bundle.min.js')}}">
+
+    </script>
     <script type="module" src="{{asset('frontend/js/index.js')}}"></script>
 </html>
