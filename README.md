@@ -7,7 +7,7 @@
 | --- | --- |
 | Lưu trữ |[drive](https://drive.google.com/drive/folders/1CGwibISBalPRJrdplI4wxrvG9ykZwd_m?usp=sharing) |
 | Note họp | [One Note](https://tqn6b-my.sharepoint.com/:o:/g/personal/thanhduy191103_tqn6b_onmicrosoft_com/Eu3tcxuaRlhOlyuryJ4piisBtHfSbGB1WgKiZW2p9N88tA?e=Ao7OJA) |
-| Những điều phải đọc | [drive](https://docs.google.com/document/d/1th9cVGIZaJTxfyp-T2tOfrYpQH1hhMNt/edit?usp=drive_link&ouid=116472220684363879382&rtpof=true&sd=true) |
+| Những điều cần chuẩn bị khi code | [drive](https://docs.google.com/document/d/1th9cVGIZaJTxfyp-T2tOfrYpQH1hhMNt/edit?usp=drive_link&ouid=116472220684363879382&rtpof=true&sd=true) |
 
 #### Demo video :
 prepare
